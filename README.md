@@ -6,7 +6,7 @@ You can find some training results from [here](./results/).
 
 
 ## Updates
-- 2021/08/03: Initial commit
+- 2021/08/04: Initial commit
 
 ## Usage
 First, install dependencies with
