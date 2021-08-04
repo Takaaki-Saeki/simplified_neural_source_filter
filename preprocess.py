@@ -1,3 +1,5 @@
+# Copyright 2021, Takaaki Saeki
+
 import numpy as np
 import os
 import librosa

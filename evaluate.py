@@ -1,3 +1,5 @@
+# Copyright 2021, Takaaki Saeki
+
 import torch
 import torch.nn.functional as F
 from torch.utils.data import DataLoader

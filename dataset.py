@@ -1,3 +1,5 @@
+# Copyright 2021, Takaaki Saeki
+
 import json
 import math
 import os

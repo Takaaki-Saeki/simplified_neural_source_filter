@@ -1,3 +1,5 @@
+# Copyright 2021, Takaaki Saeki
+
 import torch
 import torch.nn as nn
 import torchaudio

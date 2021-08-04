@@ -1,3 +1,5 @@
+# Copyright 2021, Takaaki Saeki
+
 import os
 import torch
 import yaml

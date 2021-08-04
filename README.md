@@ -9,7 +9,7 @@ You can find some training results from [here](./results/).
 - 2021/08/03: Initial commit
 
 ## Usage
-First, You can install dependencies with
+First, install dependencies with
 ```
 $pip install -r requirements.txt
 ```
