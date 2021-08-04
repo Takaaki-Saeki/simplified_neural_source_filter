@@ -1,0 +1,42 @@
+path:
+  dataset_path: "/home/hdd1/jsut_basic5000/wav16k"
+  preprocessed_path: "/workspace/simplified_neural_source_filter/preprocessed/jsut"
+  tflog_path: "/home/hdd1/simplified_neural_source_filter/output/jsut/log"
+  ckpt_path: "/home/hdd1/simplified_neural_source_filter/output/jsut/ckpt"
+  #dataset_path: "/home/hdd1/jvs100_16k"
+  #preprocessed_path: "/workspace/simplified_neural_source_filter/preprocessed/jvs"
+  #tflog_path: "/home/hdd1/simplified_neural_source_filter/output/jvs/log"
+  #ckpt_path: "/home/hdd1/simplified_neural_source_filter/output/jvs/ckpt"
+
+preprocess:
+  corpus: "jsut"
+  #corpus: "jvs"
+  num_train: 4950
+  #num_train: 95
+  sampling_rate: 16000
+  frame_length: 400
+  frame_shift: 80
+  fft_length: 1024
+  segment_length: 2
+  sp_dim: 80
+
+model:
+  n_harmonic: 7
+  phi: 0.
+  alpha: 0.1
+  sigma: 0.003
+  rnn_hidden: 32
+  cnn_out: 64
+  n_convlayer: 10
+  n_transformblock: 5
+
+train:
+  batch_size: 2
+  data_parallel: False
+  step_total: 2000000
+  restore_step: 0
+  learning_rate: 0.0005
+  grad_clip_thresh: 1.0
+  plot_step: 1000
+  val_step: 1000
+  save_step: 1000
