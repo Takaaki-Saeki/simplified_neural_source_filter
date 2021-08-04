@@ -1,7 +1,7 @@
 # Simplified Neural Source Filter Model
 
 My implementation of simplified neural source filter model (S-NSF) in [this paper](https://arxiv.org/abs/1904.12088) with some modifications.  
-I examined this implementation on [JSUT Corpus](https://sites.google.com/site/shinnosuketakamichi/publication/jsut) (a single-speaker Japanese speech corpus) and [JVS Corpus](https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_corpus) (a multi-speaker Japanese speech corpus).  
+I examined this implementation on [JSUT Corpus](https://arxiv.org/abs/1711.00354) (a single-speaker Japanese speech corpus) and [JVS Corpus](https://arxiv.org/abs/1908.06248) (a multi-speaker Japanese speech corpus).  
 You can find some training results (around 700k iteration) from [here](./results/).
 
 
