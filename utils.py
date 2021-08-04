@@ -35,7 +35,6 @@ def get_model(config, device, train=False):
     model.requires_grad_ = False
     return model
 
-
 def log(logger, step=None, loss=None, figwav=None, audio=None, sampling_rate=16000, tag=""):
     if loss is not None:
         logger.add_scalar("Loss/total_loss", loss, step)
@@ -52,7 +51,6 @@ def log(logger, step=None, loss=None, figwav=None, audio=None, sampling_rate=160
         figwav = figwav.detach().cpu().numpy()
         fig = plot_melspec(figwav / max(abs(figwav)))
         logger.add_figure(tag, fig)
-
 
 def plot_melspec(wav, sampling_rate=16000, frame_length=400, fft_length=512, frame_shift=80):
     melspec = librosa.feature.melspectrogram(
@@ -75,5 +73,3 @@ def plot_melspec(wav, sampling_rate=16000, frame_length=400, fft_length=512, fra
         ax=ax)
     ax.set_title("Melspectrogram", fontsize="medium")
     return fig
-
-

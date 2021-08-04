@@ -4,7 +4,6 @@ import torch
 import torch.nn as nn
 import torchaudio
 
-
 class MultiScaleSpectralLoss(nn.Module):
     """
     Reference: DDSP: Differentiable Digital Signal Processing
@@ -33,7 +32,6 @@ class MultiScaleSpectralLoss(nn.Module):
             loss += (self.l1loss(S_out, S_target) + self.alpha * self.l1loss(log_S_out, log_S_target))
         return loss
 
-
 if __name__ == '__main__':
 
     # test
@@ -41,8 +39,3 @@ if __name__ == '__main__':
     wav_target = torch.ones(1, 64000)
     criteria = MultiScaleSpectralLoss()
     loss = criteria(wav_out, wav_target)
-    print(loss)
-
- 
-
-

@@ -22,7 +22,6 @@ class ConvLayers(nn.Module):
         output = conv_out + excitation + feature
         return torch.tanh(output)
 
-
 class TransformBlock(nn.Module):
     def __init__(self, config, n_convlayer=10):
         super(TransformBlock, self).__init__()
@@ -39,7 +38,6 @@ class TransformBlock(nn.Module):
         output = excitation + output.transpose(1, 2)
         return output
 
-
 class SourceFilter(nn.Module):
     def __init__(self, config, device):
         super(SourceFilter, self).__init__()
@@ -50,7 +48,6 @@ class SourceFilter(nn.Module):
         excitation = self.source(f0s)
         output = self.filter(excitation, feature)
         return output
-
 
 class SourceModule(nn.Module):
     def __init__(self, config, device):
@@ -85,7 +82,6 @@ class SourceModule(nn.Module):
         excitation = eplus*argplus + argzero*self.alpha/(3.*self.sigma)*noise
         return excitation
 
-
 class FilterModule(nn.Module):
     def __init__(self, config):
         super(FilterModule, self).__init__()
@@ -108,7 +104,6 @@ class FilterModule(nn.Module):
         for n in range(self.n_transformblock):
             output = self.transform_blocks[n](output, feature)
         return output.squeeze(1)
-
 
 if __name__ == '__main__':
 

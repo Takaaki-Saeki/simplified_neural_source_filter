@@ -57,5 +57,4 @@ def evaluate(config, model, criteria, step, device, val_logger=None):
         tag="Validation/melspec_step{}_groundtruth".format(step),
     )
 
-
     return message
