@@ -28,7 +28,7 @@ $python train.py
 
 ### Visualize results
 ```
-$tensorboard --logdir=output/${config_name}/${mode}/log
+$tensorboard --logdir=${log_path}
 ```
 
 ![](./imgs/screenshot_melspec.png)
